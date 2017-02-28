@@ -1,0 +1,9 @@
+version: '3.1'
+
+services:
+  registry:
+    image: registry:2.6.0
+    ports: ["5000:5000"]
+    command: /var/lib/registry/config.yml
+    volumes:
+      - ./data:/var/lib/registry
